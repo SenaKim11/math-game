@@ -21,7 +21,7 @@ export default function WelcomePage(){
 
                         <h3 className="display-6 fw-bold">Please enter your name</h3>
 
-                        <Form.Control type="text" placeholder="Type Here..." onChange={e => setPlayerName(e.target.value)} value={playerName}/>
+                        <Form.Control type="text" placeholder="Type Here..." onChange={e => setPlayerName(e.target.value)} value={playerName} className=" rounded-pill" size="lg"/>
 
                         <Button className="px-5 rounded-pill mt-5" onClick={storePlayerName}>ENTER</Button>
 
