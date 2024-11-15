@@ -1,5 +1,7 @@
 import { useState } from "react";
 import {Container, Form, Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 
 export default function WelcomePage(){
@@ -23,7 +25,7 @@ export default function WelcomePage(){
 
                         <Form.Control type="text" placeholder="Type Here..." onChange={e => setPlayerName(e.target.value)} value={playerName} className=" rounded-pill" size="lg"/>
 
-                        <Button className="px-5 rounded-pill mt-5" onClick={storePlayerName}>ENTER</Button>
+                        <Button className="px-5 rounded-pill mt-5" onClick={storePlayerName} as={Link} to="/select-level">ENTER</Button>
 
                     </Form.Group>
                 </Form>
