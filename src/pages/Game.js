@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import { Container, Button, Form, NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -11,7 +12,7 @@ export default function Game(){
     const [randomNum1, setRandomNum1] = useState(0);
     const [randomNum2, setRandomNum2] = useState(0);
     const [answer, setAnswer] = useState(0);
-    let [stage, setStage] = useState(9);
+    let [stage, setStage] = useState(1);
     let [score, setScore] = useState(0);
     let [nextBtn, setNextBtn] = useState(true);
     let [checkBtn, setCheckBtn] = useState(false);
@@ -73,7 +74,7 @@ export default function Game(){
 
     
     return(
-        <Container  fluid className="d-flex flex-column m-0 p-0 bg-warning p-5">
+        <Container  fluid className="d-flex flex-column m-0 p-0 bg-success p-5">
         {/* PLAYER NAME */}
         <Container fluid className="d-flex">
             <h1 className="me-auto">Welcome, {playerName}!</h1>
@@ -111,7 +112,7 @@ export default function Game(){
 
                                 <Button className="rounded-pill mt-5 w-100" disabled={checkBtn} onClick={checkAnswer}>CHECK</Button>
 
-                                <Button className="rounded-pill mt-1 w-100" disabled={nextBtn}>NEXT</Button>
+                                <Button className="rounded-pill mt-1 w-100" disabled={stage < 10} as={Link} to="/next">NEXT</Button>
 
                             </Form.Group>
                         </Form>
