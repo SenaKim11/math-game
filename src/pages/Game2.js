@@ -102,24 +102,23 @@ export default function Game() {
   }
 
   return (
-    <Container fluid className="d-flex flex-column m-0 p-0 bg-warning p-5">
+    <Container fluid className="midbg vh-100 d-flex flex-column m-0 p-0 p-5">
       {/* PLAYER NAME */}
       <Container fluid className="d-flex">
-        <h1 className="me-auto">Welcome, {playerName}!</h1>
-        <h1>SCORE {score}</h1>
+        <h1 className="me-auto fw-bold text-round">Medium level for you, {playerName}!</h1>
+        <h1 className="fw-bold text-round">SCORE {score}</h1>
       </Container>
 
       <Container fluid className="vh-100 d-flex align-items-center justify-content-center">
         <Container fluid className="row d-flex align-items-center justify-content-center ">
-          <Container className="col-6 d-flex align-items-center justify-content-center flex-column border border-dark p-5 rounded-3 shadow" data-aos="flip-left">
-            <h1 className="display-6 fw bold mb-4">STAGE {stage}</h1>
-            <h2 className="text-danger">Time Left: {timeLeft}s</h2>
+          <Container className="glass1 col-6 d-flex align-items-center justify-content-center flex-column border border-dark p-5 rounded-3 shadow border-3" data-aos="flip-left">
+            <h2 className="text-custom1 fw-bold mb-5">ADDITION: Time Left: {timeLeft}s</h2>
             <Container className="col-5 d-flex align-items-center justify-content-center gap-1">
-              <Container className="col-12 bg-light d-flex align-items-center justify-content-center p-5 rounded-3">
+              <Container className="border border-dark border-3 col-12 bg-light d-flex align-items-center justify-content-center p-5 rounded-3">
                 <h1 className="display-3 fw-bold">{randomNum1}</h1>
               </Container>
 
-              <Container className="col-12 bg-light d-flex align-items-center justify-content-center p-5 rounded-3">
+              <Container className="border border-dark border-3 col-12 bg-light d-flex align-items-center justify-content-center p-5 rounded-3">
                 <h1 className="display-3 fw-bold">{randomNum2}</h1>
               </Container>
             </Container>
@@ -132,7 +131,7 @@ export default function Game() {
                     placeholder="TYPE YOUR ANSWER"
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
-                    className=" rounded-pill d-none"
+                    className=" rounded-pill d-none border border-dark border-2"
                     size="lg"
                   />
                 ) : (
@@ -141,16 +140,16 @@ export default function Game() {
                     placeholder="TYPE YOUR ANSWER"
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
-                    className=" rounded-pill"
+                    className=" rounded-pill border border-dark border-2"
                     size="lg"
                   />
                 )}
 
-                <Button className="rounded-pill mt-5 w-100" disabled={checkBtn} onClick={checkAnswer}>
+                <Button className="rounded-pill mt-5 w-100 border border-dark border-2 btn-warning" disabled={checkBtn} onClick={checkAnswer}>
                   CHECK
                 </Button>
 
-                <Button className="rounded-pill mt-1 w-100" disabled={stage < 10} as={Link} to="/next1">NEXT</Button>
+                <Button className="rounded-pill mt-1 w-100 border border-dark border-2" disabled={stage < 10} as={Link} to="/next1">NEXT</Button>
 
               </Form.Group>
             </Form>

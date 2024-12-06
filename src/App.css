@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+.background {
+  background-image: url("C:\Users\julia\OneDrive\Documents\reactFinalGame\math-game\src\pages\Mbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-shadow {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), /* Soft shadow */
+              0px 5px 20px rgba(2, 9, 4, 0.3); /* Secondary shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 15px; /* Rounded corners */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-shadow:hover {
+  box-shadow: 0px 5px 10px 10px rgb(6, 96, 29, 0.3), 
+            0px 5px 10px 10px rgb(6, 96, 29, 0.3);
+}  
+
+.custom-shadow:active { 
+  transform: scale(1); 
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 
+               0 4px 4px rgba(0, 0, 0, 0.2);
+}  
+
+.easybg{
+  background-image: url("C:\Users\julia\OneDrive\Documents\reactFinalGame\math-game\src\pages\easybg.jpg");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.midbg{
+  background-image: url("C:\Users\julia\OneDrive\Documents\reactFinalGame\math-game\src\pages\midbg.jpg");
 }
 
-.App-link {
-  color: #61dafb;
+.hardbg{
+  background-image: url("C:\Users\julia\OneDrive\Documents\reactFinalGame\math-game\src\pages\hardbg.jpg");
+}
+.text-custom {
+  color: #ffffff; /* A vibrant purple for an elegant look */
+  text-shadow: 2px 2px 4px rgba(5, 102, 1); /* Subtle shadow for depth */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-custom:hover {
+  color: #ffffff; /* Slightly darker shade on hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
 }
+
+.text-custom1 {
+  color: #ed0000; /* A vibrant purple for an elegant look */
+  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.1); /* Subtle shadow for depth */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-custom1:hover {
+  color: #ed0000; /* Slightly darker shade on hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+}
+
+.text-custom2 {
+  color: #ffffff; /* A vibrant purple for an elegant look */
+  text-shadow: 2px 2px 4px rgba(3, 3, 3, 0.1); /* Subtle shadow for depth */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-custom2:hover {
+  color: #ffffff; /* Slightly darker shade on hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+}
+
+
+.text-header {
+  color: #0a5f32;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Subtle shadow for depth */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-round {
+  color: #ffffff; /* A vibrant purple for an elegant look */
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Subtle shadow for depth */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.glass {
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 5px 10px 10px rgb(6, 96, 29)
+}
+
+.glass1 {
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 5px 10px 10px rgb(6, 96, 29)
+}
+
